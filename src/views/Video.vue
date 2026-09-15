@@ -1,6 +1,5 @@
 <script setup>
 import { useRouter } from 'vue-router'
-import toeyVideo from '../assets/video/toey.mp4'
 
 const router = useRouter()
 
@@ -39,11 +38,11 @@ function goLove() {
       <div class="video-wrapper">
 
         <video
-          class="video"
-          :src="toeyVideo"
-          controls
-          playsinline
-          preload="metadata"
+            class="video"
+            src="/video/toey.mp4"
+            controls
+            playsinline
+            preload="metadata"
         >
           Browser ของคุณไม่รองรับวิดีโอ
         </video>
