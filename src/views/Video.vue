@@ -13,274 +13,112 @@ function goLove() {
 </script>
 
 <template>
-  <main>
-
+  <div class="video-page">
     <div class="video-card">
 
-      <div class="top">
+      <div class="heart">💙</div>
 
-        <span class="heart">
-          💙
-        </span>
+      <h1>วิดีโอของเรา 🎬</h1>
 
-        <h1>
-          วิดีโอของเรา 🎬
-        </h1>
+      <p class="subtitle">
+        วิดีโอที่เค้าตั้งใจทำให้บี๋
+      </p>
 
-        <p>
-          เก็บช่วงเวลาของเราไว้ด้วยกันนะ
-        </p>
-
-      </div>
-
-      <!-- Video -->
-
-      <div class="video-wrapper">
-
-        <video
-            class="video"
-            src="/video/toey.mp4"
-            controls
-            playsinline
-            preload="metadata"
-        >
-          Browser ของคุณไม่รองรับวิดีโอ
-        </video>
-
-      </div>
+      <video
+        class="video"
+        src="/video/toey.mp4"
+        controls
+        playsinline
+        preload="metadata"
+      >
+        Browser ของคุณไม่รองรับวิดีโอ
+      </video>
 
       <p class="message">
-        💙 ทุกช่วงเวลาที่มีบี๋
-        <br>
-        เป็นช่วงเวลาที่เค้ามีความสุข
+        ขอบคุณที่เข้ามาเป็นส่วนหนึ่งในชีวิตเค้านะ 💕
       </p>
 
       <div class="buttons">
-
-        <button
-          class="home-btn"
-          @click="goHome"
-        >
+        <button @click="goHome">
           🏠 Home
         </button>
 
-        <button
-          class="love-btn"
-          @click="goLove"
-        >
-          💙 กลับไปหน้าของเรา
+        <button @click="goLove">
+          💙 Love
         </button>
-
       </div>
 
     </div>
-
-  </main>
+  </div>
 </template>
 
 <style scoped>
-
-* {
-  box-sizing: border-box;
-}
-
-main {
+.video-page {
   min-height: 100vh;
-  padding: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  font-family: 'Kanit', sans-serif;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d6f0ff,
-      #8ecae6,
-      #a8d8ff,
-      #caf0f8
-    );
-
-  background-size: 400% 400%;
-
-  animation: sky 14s ease infinite;
-}
-
-@keyframes sky {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
+  padding: 20px;
+  background: linear-gradient(135deg, #dff6ff, #bde7ff);
 }
 
 .video-card {
   width: 100%;
-  max-width: 700px;
-
-  background: rgba(255,255,255,.94);
-
+  max-width: 800px;
+  background: white;
+  border-radius: 25px;
   padding: 30px;
-
-  border-radius: 30px;
-
   text-align: center;
-
-  box-shadow:
-    0 20px 60px
-    rgba(0,110,180,.3);
-
-  animation:
-    pop .7s
-    cubic-bezier(.2,.9,.3,1.4);
-}
-
-@keyframes pop {
-
-  from {
-    transform: scale(.8);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .heart {
-  font-size: 3.5rem;
-
-  display: block;
-
-  animation:
-    pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.15);
-  }
-
+  font-size: 50px;
 }
 
 h1 {
-  color: #0077b6;
-  margin: 8px 0;
+  color: #2980b9;
+  margin: 10px 0;
 }
 
-.top p {
-  color: #607d8b;
-  margin-bottom: 25px;
-}
-
-.video-wrapper {
-  width: 100%;
-
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  background: #000;
-
-  box-shadow:
-    0 10px 30px
-    rgba(0,0,0,.2);
+.subtitle {
+  color: #777;
 }
 
 .video {
   width: 100%;
-  display: block;
-  max-height: 70vh;
+  max-height: 500px;
+  margin: 20px 0;
+  border-radius: 15px;
+  background: black;
 }
 
 .message {
-  color: #0077b6;
-
-  margin: 20px 0;
-
-  line-height: 1.7;
+  color: #555;
+  font-size: 18px;
+  margin: 15px 0 25px;
 }
 
 .buttons {
   display: flex;
-
   justify-content: center;
-
-  gap: 12px;
-
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 button {
   border: none;
-
-  border-radius: 50px;
-
-  padding: 13px 25px;
-
-  font-family: 'Kanit', sans-serif;
-
-  font-size: 1rem;
-
+  padding: 12px 25px;
+  border-radius: 999px;
+  background: #3498db;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-
-  transition: .25s;
+  transition: 0.2s;
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
-
-.home-btn {
-  background: #eef3f6;
-  color: #0077b6;
-}
-
-.love-btn {
-  background:
-    linear-gradient(
-      135deg,
-      #00b4d8,
-      #0077b6
-    );
-
-  color: white;
-}
-
-@media (max-width: 600px) {
-
-  .video-card {
-    padding: 20px;
-    border-radius: 25px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  button {
-    width: 100%;
-  }
-
-}
-
 </style>
