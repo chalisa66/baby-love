@@ -26,12 +26,11 @@ function goLove() {
 
       <video
         class="video"
-        src="/video/toey.mp4"
+        src="/video/Toey.mp4"
         controls
         playsinline
         preload="metadata"
       >
-        Browser ของคุณไม่รองรับวิดีโอ
       </video>
 
       <p class="message">
