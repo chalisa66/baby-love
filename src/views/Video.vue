@@ -21,7 +21,7 @@ function goLove() {
       <h1>วิดีโอของเรา 🎬</h1>
 
       <p class="subtitle">
-        วิดีโอที่ของเรา 
+        วิดีโอของเรา 
       </p>
 
       <video
