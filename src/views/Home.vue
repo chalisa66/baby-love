@@ -553,7 +553,7 @@ onBeforeUnmount(() => {
 body {
   min-height: 100vh;
 
-  overflow: hidden;
+  overflow: auto;
 }
 
 main {

@@ -54,9 +54,11 @@ function goLove() {
 <style scoped>
 .video-page {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   padding: 20px;
   background: linear-gradient(135deg, #dff6ff, #bde7ff);
 }
